@@ -4,11 +4,11 @@ Un catálogo de productos CRUD completo con backend PHP, interfaz HTML/CSS/JS mo
 
 ## Resumen del Proyecto
 
-Este proyecto es una aplicación web que permite gestionar un catálogo de productos, implementando todas las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) a través de una API RESTful en PHP y una interfaz de usuario interactiva.
+Este proyecto es una aplicación web que permite gestionar un catálogo de productos, implementando todas las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) a través de una API RESTful en PHP y una interfaz de usuario interactiva HTML/CSS/JS.
 
 ### Características principales:
 
-- **Frontend moderno** con HTML, CSS y JavaScript nativo
+- **Frontend simple y efectivo** con HTML, CSS y JavaScript nativo
 - **Backend RESTful** en PHP nativo
 - **Persistencia** en MySQL
 - **Completamente dockerizado** para fácil ejecución en cualquier entorno
@@ -68,22 +68,6 @@ Credenciales de acceso:
 - **Contraseña**: password
 - **Base de datos**: laravel
 
-Si deseas cambiar la configuración del puerto de phpMyAdmin, edita el archivo `docker-compose.yml` añadiendo el siguiente servicio:
-
-```yaml
-phpmyadmin:
-  image: phpmyadmin/phpmyadmin
-  ports:
-    - "8080:80"
-  environment:
-    - PMA_HOST=mysql
-    - PMA_PORT=3306
-  depends_on:
-    - mysql
-  networks:
-    - app-network
-```
-
 ## Características Avanzadas
 
 Además de las funcionalidades básicas CRUD, este proyecto incluye características avanzadas:
@@ -113,13 +97,25 @@ Además de las funcionalidades básicas CRUD, este proyecto incluye característ
 
 ## Estructura del Proyecto
 
-- **backend/**: Backend PHP nativo
+- **backend/**: Backend PHP nativo e interfaz de usuario
   - `api/products.php`: Endpoints CRUD para productos
   - `test-ui.html`: Interfaz HTML/CSS/JS para gestionar productos
   - `setup-db.php`: Script para inicializar la base de datos
   - `Dockerfile`: Configuración para crear el contenedor backend
+  - `api-docs.html` y `api-docs.json`: Documentación de la API
+  - `tests/`: Pruebas unitarias para la API
 
 - **docker-compose.yml**: Configuración Docker para todos los servicios
+
+## Interfaz de Usuario
+
+La interfaz principal está implementada en `backend/test-ui.html` y ofrece:
+
+- Diseño moderno y responsivo
+- Ventanas modales para operaciones CRUD
+- Validación de datos en el cliente
+- Comunicación asíncrona con la API mediante Fetch
+- Mensajes de retroalimentación para el usuario
 
 ## Funcionalidades Implementadas
 
