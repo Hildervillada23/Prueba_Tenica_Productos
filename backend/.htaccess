@@ -1,0 +1,25 @@
+RewriteEngine On
+
+# Manejar CORS preflight
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# Redirigir /api/login a api/login.php
+RewriteRule ^api/login$ api/login.php [L]
+
+# Redirigir /api/products a api/products.php
+RewriteRule ^api/products$ api/products.php [L]
+
+# Redirigir /api/products/123 a api/products.php?id=123
+RewriteRule ^api/products/([0-9]+)$ api/products.php?id=$1 [L]
+
+# Si la solicitud es para un archivo o directorio que existe, servir directamente
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Cualquier otra solicitud a /api, mostrar un error
+RewriteRule ^api/ - [R=404,L]
+
+# Todo lo demás, mostrar la página de inicio
+RewriteRule ^ index.php [L] 
