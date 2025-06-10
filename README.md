@@ -1,4 +1,4 @@
-# Mi Catálogo de Productos
+# Mi Catálogo de Productos - Prueba Técnica
 
 Un catálogo de productos CRUD completo con backend PHP, interfaz HTML/CSS/JS moderna y dockerización.
 
@@ -30,8 +30,8 @@ Si no usas Docker, consulta el archivo `HERRAMIENTAS-DESARROLLO.md` para ver la 
 
 ```bash
 # Clonar el repositorio
-git clone <url-del-repositorio>
-cd mi-catalogo-productos
+git clone https://github.com/Hildervillada23/Prueba_Tenica_Productos.git
+cd Prueba_Tenica_Productos
 
 # Ejecutar el script de inicio
 run-project.bat
@@ -41,8 +41,8 @@ run-project.bat
 
 ```bash
 # Clonar el repositorio
-git clone <url-del-repositorio>
-cd mi-catalogo-productos
+git clone https://github.com/Hildervillada23/Prueba_Tenica_Productos.git
+cd Prueba_Tenica_Productos
 
 # Dar permisos de ejecución al script
 chmod +x run-project.sh
@@ -221,4 +221,4 @@ Este proyecto cumple con todos los requisitos especificados en la prueba técnic
 3. ✅ **Persistencia**: Datos almacenados en MySQL
 4. ✅ **Dockerización**: Entorno completo configurado con Docker Compose
 5. ✅ **Buenas prácticas**: Código organizado, validación de datos, gestión de errores
-6. ✅ **Seguridad**: Validación de entradas, autenticación por token, prevención de inyección SQL 
+6. ✅ **Seguridad**: Validación de entradas, autenticación por token, prevención de inyección SQL
